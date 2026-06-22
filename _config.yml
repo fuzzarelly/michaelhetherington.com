@@ -1,0 +1,24 @@
+title: Michael Hetherington
+description: >-
+  EFT Tapping practitioner, trainer, and author helping you release anxiety,
+  pain, and emotional blocks naturally.
+url: "https://www.michaelhetherington.com"
+baseurl: ""
+
+author:
+  name: Michael Hetherington
+  location: Chiang Mai, Thailand
+
+plugins: []
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scraper.ps1
+  - patch_audit.ps1
+  - site_audit.json
+  - redirect_map.txt
+  - url_cull_list.md
+  - "*.ps1"
+  - node_modules

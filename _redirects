@@ -1,0 +1,40 @@
+# Netlify _redirects file
+# Format: [source] [destination] [code]
+# GitHub Pages does not process this file natively.
+# The JavaScript redirect handler in 404.html covers these for GitHub Pages.
+# If site is migrated to Netlify, this file takes over automatically.
+
+/tap-products /programs/ 301
+/tap-products/p/streamline-optimize-your-goal-setting-with-eft-tapping-4-powerful-eft-tapping-methods-for-clearing-stress-doubt-overwhelm-when-it-comes-to-goal-setting-moving-forward-in-your-life /programs/ 301
+/tap-products/p/healingthemindmasterclass /programs/ 301
+/tap-products/p/dementia-alzheimers-class /programs/ 301
+/tap-products/p/find-instant-calm-with-these-3-powerful-eft-tapping-scripts-for-download /programs/write-eft-scripts/ 301
+/tap-products/p/09vqkywfxwvpv7qhbb21m7m3eu43cu /programs/ 301
+/tap-products/p/efttappingforheadache /programs/headache-migraine-relief/ 301
+/tap-products/p/letting-go-meditations /programs/ 301
+/tap-products/p/chakraeftclass /programs/ 301
+/tap-products/p/how-to-write-eft-scripts /programs/write-eft-scripts/ 301
+/tap-products/p/tappingintomoney /programs/unblock-your-wealth/ 301
+/1on1offers /about/ 301
+/5eftdigestion /eft-for-digestion/ 301
+/5-students-video /efttraining/ 301
+/6monthoffer /healyourselfwitheft/ 301
+/8weekoffer /healyourselfwitheft/ 301
+/accreditation /efttraining/ 301
+/anger-tap /programs/clear-the-weight/ 301
+/anxiety-heart /healyourselfwitheft/ 301
+/blog-life/blog-post-title-one-226hx /blog-life/ 301
+/blog-life/blog-post-title-three-dp8yj /blog-life/ 301
+/bodyhealingtap /programs/pain-relief/ 301
+/booked-out /about/ 301
+/bulletproof-class-may26 /programs/bulletproof/ 301
+/chatbot-script-test / 301
+/custom-eft-scripts /efttappingchart/ 301
+/eft-scripts /efttappingchart/ 301
+/eft-michael-offer /about/ 301
+/eftforfear /healyourselfwitheft/ 301
+/eftphrasesfree /efttappingchart/ 301
+/store/p/for-enrolled-eft-students-only-1-on-1-eft-session-with-michael /about/ 301
+/store/p/3-month-program-1 /healyourselfwitheft/ 301
+/tapping-into-money /programs/unblock-your-wealth/ 301
+/tired-all-the-time /healyourselfwitheft/ 301

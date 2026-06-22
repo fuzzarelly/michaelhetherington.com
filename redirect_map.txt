@@ -1,0 +1,19 @@
+﻿/ -> /
+/about -> /about
+/efttraining -> /efttraining
+/eft-for-digestion -> /eft-for-digestion
+/healyourselfwitheft -> /healyourselfwitheft
+/efttappingchart -> /efttappingchart
+/taoist-yoga -> /taoist-yoga
+/reviews -> /reviews
+/eft-scripts -> /eft-scripts
+/anxiety-relief-guide-with-eft-tapping -> /anxiety-relief-guide-with-eft-tapping
+/blog-life/how-long-do-i-need-to-do-eft-tapping-for -> /blog-life/how-long-do-i-need-to-do-eft-tapping-for  # REVIEW: /blog-life/ prefix -- confirm new site keeps same path or uses /blog/
+/blog-life/surrogate-eft-tapping -> /blog-life/surrogate-eft-tapping  # REVIEW: /blog-life/ prefix -- confirm new site keeps same path or uses /blog/
+/blog-life/20-eft-tapping-affirmations-for-healing-your-body -> /blog-life/20-eft-tapping-affirmations-for-healing-your-body  # REVIEW: /blog-life/ prefix -- confirm new site keeps same path or uses /blog/
+/blog-life/eft-tapping-for-headaches-and-migraines -> /blog-life/eft-tapping-for-headaches-and-migraines  # REVIEW: /blog-life/ prefix -- confirm new site keeps same path or uses /blog/
+/blog-life/eft-tapping-worksheet -> /blog-life/eft-tapping-worksheet  # REVIEW: /blog-life/ prefix -- confirm new site keeps same path or uses /blog/
+/blog-life/decoding-the-science-the-magic-of-clinical-eft-tapping -> /blog-life/decoding-the-science-the-magic-of-clinical-eft-tapping  # REVIEW: /blog-life/ prefix -- confirm new site keeps same path or uses /blog/
+/blog-life/tapping-away-anxiety-with-eft-tapping -> /blog-life/tapping-away-anxiety-with-eft-tapping  # REVIEW: /blog-life/ prefix -- confirm new site keeps same path or uses /blog/
+/blog-life/the-powert-of-eft-tapping-for-stress-and-anxiety -> /blog-life/the-powert-of-eft-tapping-for-stress-and-anxiety  # REVIEW: /blog-life/ prefix -- confirm new site keeps same path or uses /blog/
+/blog-life/how-anxiety-affects-mental-and-physical-health -> /blog-life/how-anxiety-affects-mental-and-physical-health  # REVIEW: /blog-life/ prefix -- confirm new site keeps same path or uses /blog/

@@ -1,0 +1,84 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title -->
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <!-- Meta description -->
+  {% if page.description %}
+  <meta name="description" content="{{ page.description | strip_html | strip_newlines | truncate: 160 }}">
+  {% elsif site.description %}
+  <meta name="description" content="{{ site.description }}">
+  {% endif %}
+
+  <!-- Canonical -->
+  {% if page.canonical %}
+  <link rel="canonical" href="{{ page.canonical }}">
+  {% else %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url | remove: 'index.html' }}">
+  {% endif %}
+
+  <!-- Robots -->
+  {% if page.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {% else %}
+  <meta name="robots" content="index, follow">
+  {% endif %}
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title"       content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url"         content="{% if page.canonical %}{{ page.canonical }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
+  <meta property="og:site_name"   content="{{ site.title }}">
+  {% if page.description %}
+  <meta property="og:description" content="{{ page.description | strip_html | truncate: 160 }}">
+  {% endif %}
+  {% if page.og_image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.og_image }}">
+  {% endif %}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  {% if page.description %}
+  <meta name="twitter:description" content="{{ page.description | strip_html | truncate: 160 }}">
+  {% endif %}
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Favicon (add your favicon files to /assets/favicon/) -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png"> -->
+  <!-- <link rel="apple-touch-icon"                    href="/assets/favicon/apple-touch-icon.png"> -->
+
+  <!-- GA4: Replace G-XXXXXXXXXX with your Measurement ID -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <!-- Meta Pixel: Replace XXXXXXXXXXXXXXXXXX with your Pixel ID -->
+  <!--
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','XXXXXXXXXXXXXXXXXX');
+    fbq('track','PageView');
+  </script>
+  -->
+</head>

@@ -1,0 +1,68 @@
+<header class="site-nav" role="banner">
+  <div class="nav-inner">
+
+    <a href="/" class="nav-logo" aria-label="Michael Hetherington — Home">
+      Michael Hetherington
+    </a>
+
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li>
+        <a href="/about/"
+           class="nav-link{% if page.url contains '/about/' %} is-active{% endif %}">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="/programs/"
+           class="nav-link{% if page.url == '/programs/' %} is-active{% endif %}">
+          Programs
+        </a>
+      </li>
+      <li>
+        <a href="/classes/"
+           class="nav-link{% if page.url contains '/classes/' %} is-active{% endif %}">
+          Classes
+        </a>
+      </li>
+      <li>
+        <a href="/efttraining/"
+           class="nav-link{% if page.url contains '/efttraining/' %} is-active{% endif %}">
+          EFT Training
+        </a>
+      </li>
+      <li>
+        <a href="/blog-life/"
+           class="nav-link{% if page.url contains '/blog-life/' %} is-active{% endif %}">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="https://tidycal.com/michaelhetherington"
+           class="nav-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          Book a Session
+        </a>
+      </li>
+      <li>
+        <a href="https://tidycal.com/michaelhetherington"
+           class="btn-primary nav-cta"
+           target="_blank"
+           rel="noopener noreferrer">
+          Work With Me
+        </a>
+      </li>
+    </ul>
+
+    <button class="nav-hamburger"
+            id="nav-hamburger"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+  </div>
+</header>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Placeholder sitemap — replace with full list before launch.
+  Consider using the jekyll-sitemap plugin (requires GitHub Pages allowlist).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
+  <url><loc>https://www.michaelhetherington.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.michaelhetherington.com/about/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.michaelhetherington.com/efttraining/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.michaelhetherington.com/healyourselfwitheft/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.michaelhetherington.com/eft-for-digestion/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.michaelhetherington.com/efttappingchart/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.michaelhetherington.com/eft-scripts/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.michaelhetherington.com/anxiety-relief-guide-with-eft-tapping/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.michaelhetherington.com/reviews/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.michaelhetherington.com/taoist-yoga/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Programs -->
+  <url><loc>https://www.michaelhetherington.com/programs/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.michaelhetherington.com/programs/bulletproof/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.michaelhetherington.com/programs/food-sensitivities/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.michaelhetherington.com/programs/clear-the-weight/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.michaelhetherington.com/programs/pain-relief/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.michaelhetherington.com/programs/unlock-deep-rest/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.michaelhetherington.com/programs/trauma-informed-eft/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.michaelhetherington.com/programs/unblock-your-wealth/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.michaelhetherington.com/programs/write-eft-scripts/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.michaelhetherington.com/programs/headache-migraine-relief/</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- Blog -->
+  <url><loc>https://www.michaelhetherington.com/blog-life/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.michaelhetherington.com/blog-life/how-long-do-i-need-to-do-eft-tapping-for/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.michaelhetherington.com/blog-life/surrogate-eft-tapping/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.michaelhetherington.com/blog-life/20-eft-tapping-affirmations-for-healing-your-body/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.michaelhetherington.com/blog-life/eft-tapping-for-headaches-and-migraines/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.michaelhetherington.com/blog-life/eft-tapping-worksheet/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.michaelhetherington.com/blog-life/decoding-the-science-the-magic-of-clinical-eft-tapping/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.michaelhetherington.com/blog-life/tapping-away-anxiety-with-eft-tapping/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.michaelhetherington.com/blog-life/the-powert-of-eft-tapping-for-stress-and-anxiety/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.michaelhetherington.com/blog-life/how-anxiety-affects-mental-and-physical-health/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>

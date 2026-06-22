@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+
+<!-- Delivery nav: logo only, no menu -->
+<header class="site-nav" role="banner">
+  <div class="nav-inner" style="justify-content: center;">
+    <a href="/" class="nav-logo" aria-label="Michael Hetherington — Home">
+      Michael Hetherington
+    </a>
+  </div>
+</header>
+
+{{ content }}
+
+<!-- Delivery footer: copyright line only -->
+<footer style="background: var(--navy); padding: 20px 0; text-align: center;" role="contentinfo">
+  <p style="color: rgba(250,247,242,0.5); font-size: 0.85rem; margin: 0;">
+    &copy; <span id="footer-year"></span> Michael Hetherington &nbsp;&middot;&nbsp; Chiang Mai, Thailand
+  </p>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Dev/audit scripts (not needed for GitHub Pages)
+scraper.ps1
+patch_audit.ps1
+site_audit.json
+url_cull_list.md
+preview.html
+
+# OS
+.DS_Store
+Thumbs.db
