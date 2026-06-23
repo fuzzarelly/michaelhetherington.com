@@ -88,3 +88,31 @@
 </footer>
 
 <script src="{{ site.baseurl }}/js/main.js"></script>
+
+<!-- DMChamp chat widget -->
+<script src="https://api.dmchamp.com/v1/chat-widget/V8oP7Tv5trQScP7Gzw1s"></script>
+
+<!-- ProofFactor / Juicier social proof -->
+<script>
+  (function(){
+    if(document.getElementById('juicier-container')!==null||!document.body)return;
+    var d=document.createElement('div');
+    d.id='juicier-container';
+    d.setAttribute('data-account-id','8zlHutPxpaQNCjPYWqT8AXNyslv2');
+    d.setAttribute('style','position:relative;bottom:0;left:0;');
+    var s=document.createElement('script');
+    s.type='text/javascript';
+    s.src='https://cdn.one.store/javascript/dist/1.0/jcr-widget.js?account_id=8zlHutPxpaQNCjPYWqT8AXNyslv2';
+    s.defer=true;
+    document.body.appendChild(d);
+    document.body.appendChild(s);
+  })();
+</script>
+
+<!-- Lead event tracking on form submit -->
+<script>
+  document.addEventListener('submit', function() {
+    if(typeof fbq!=='undefined') fbq('track','Lead');
+    if(typeof ttq!=='undefined') ttq.track('SubmitForm');
+  });
+</script>
