@@ -20,5 +20,7 @@ exclude:
   - site_audit.json
   - redirect_map.txt
   - url_cull_list.md
+  - DELIVERY-PAGE-URLS.md
+  - migration-inputs
   - "*.ps1"
   - node_modules

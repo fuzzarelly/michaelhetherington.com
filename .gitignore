@@ -10,6 +10,12 @@ site_audit.json
 url_cull_list.md
 preview.html
 
+# Private migration data (DNS, Squarespace admin details, old-site archive)
+migration-inputs/
+
 # OS
 .DS_Store
 Thumbs.db
+
+# Secret class-access URL list (keep local only)
+DELIVERY-PAGE-URLS.md
