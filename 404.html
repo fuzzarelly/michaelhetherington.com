@@ -9,11 +9,9 @@ noindex: true
 <main>
   <section class="section-light" style="min-height: 60vh; display: flex; align-items: center;">
     <div class="container text-center">
-      <span class="badge badge--terracotta mb-sm">404</span>
-      <h1 style="margin-top: 16px; margin-bottom: 12px;">Page Not Found</h1>
+      <h1 style="margin-top: 16px; margin-bottom: 12px;">This page has moved</h1>
       <p class="mx-auto mb-md" style="max-width: 480px; color: #555;">
-        The page you're looking for has moved or doesn't exist.
-        Let's get you back on track.
+        Taking you there now. If nothing happens, choose where to go below.
       </p>
       <div class="flex flex-center flex-wrap gap-md">
         <a href="/"            class="btn-primary">Back to Home</a>
@@ -26,44 +24,85 @@ noindex: true
 
 <script>
 (function() {
+  // Old Squarespace URLs → closest page on the new site.
+  // Anything not listed (retired pages, old blog posts, tag pages) goes to the homepage.
+  var PHRASES = 'https://healyourselfeft.com/eft-tapping-phrases';
   var redirects = {
-    '/tap-products': '/programs/',
-    '/tap-products/p/streamline-optimize-your-goal-setting-...': '/programs/',
-    '/tap-products/p/healingthemindmasterclass': '/programs/',
-    '/tap-products/p/dementia-alzheimers-class': '/programs/',
-    '/tap-products/p/find-instant-calm-with-these-3-powerful-eft-tapping-scripts-for-download': '/programs/write-eft-scripts/',
-    '/tap-products/p/09vqkywfxwvpv7qhbb21m7m3eu43cu': '/programs/',
-    '/tap-products/p/efttappingforheadache': '/programs/headache-migraine-relief/',
-    '/tap-products/p/letting-go-meditations': '/programs/',
-    '/tap-products/p/chakraeftclass': '/programs/',
-    '/tap-products/p/how-to-write-eft-scripts': '/programs/write-eft-scripts/',
+    // Old class/product pages → the matching class
+    '/tap-products': '/classes/',
+    '/tap-products/class': '/classes/',
+    '/shop': '/classes/',
+    '/store': '/classes/',
+    '/tap-products/p/how-to-become-emotionally-bulletproof': '/programs/bulletproof/',
+    '/tap-products/p/how-to-use-eft-tapping-for-food-sensitivities': '/programs/food-sensitivities/',
+    '/tap-products/p/eft-for-healing-relationships': '/programs/clear-the-weight/',
+    '/tap-products/p/eft-tapping-for-pain-relief': '/programs/pain-relief/',
+    '/tap-products/p/eft-tapping-for-sleep-and-insomnia-class': '/programs/unlock-deep-rest/',
+    '/tap-products/p/improving-sleep-healing-insomnia-with-eft-tapping-and-chinese-medicine': '/programs/unlock-deep-rest/',
+    '/tap-products/p/efttappingformoney': '/programs/unblock-your-wealth/',
     '/tap-products/p/tappingintomoney': '/programs/unblock-your-wealth/',
-    '/1on1offers': '/about/',
-    '/5eftdigestion': '/eft-for-digestion/',
+    '/tap-products/p/efttappingforheadache': '/programs/headache-migraine-relief/',
+    '/tap-products/p/why-your-anxiety-keeps-coming-back-10-eft-tools-to-calm-your-nervous-system-for-good': '/programs/eft-for-anxiety/',
+    '/tap-products/p/how-to-write-eft-scripts': '/programs/write-eft-scripts/',
+    '/tap-products/p/find-instant-calm-with-these-3-powerful-eft-tapping-scripts-for-download': '/programs/write-eft-scripts/',
+    '/tap-products/p/how-to-run-eft-tapping-circles-in-person-and-online-a-free-class-with-michael-hetherington': '/efttraining/',
+    '/tap-products/p/how-to-become-emotionally-energetically-bulletproof-the-5-steps-online-masterclass-ta9lp': '/books/',
+    '/tapping-into-money': '/programs/unblock-your-wealth/',
+    '/moneyfreedomeft': '/programs/unblock-your-wealth/',
+    '/eft-for-anxiety-wait': '/programs/eft-for-anxiety/',
+    '/anger-tap': '/programs/clear-the-weight/',
+    '/bodyhealingtap': '/programs/pain-relief/',
+
+    // Old class replay pages → new class access pages, so past buyers keep their class
+    '/bulletproof-class-may26': '/class-access/bulletproof-x7k2m9/',
+    '/foodsensitivities': '/class-access/food-sensitivities-p4n8q1/',
+    '/eft-relationship-26': '/class-access/clear-the-weight-r3j6v5/',
+    '/eft-script-class': '/class-access/write-eft-scripts-g4p3x1/',
+
+    // Training
+    '/training': '/efttraining/',
+    '/accreditation': '/efttraining/',
+    '/chakrabalancingtraining': '/efttraining/',
+    '/eftforyou': '/efttraining/',
+    '/eftcomparisonguide': '/efttraining/',
+    '/eftcomparisonguide1': '/efttraining/',
+    '/eftcomparisonguide2': '/efttraining/',
     '/5-students-video': '/efttraining/',
+
+    // Programs
     '/6monthoffer': '/healyourselfwitheft/',
     '/8weekoffer': '/healyourselfwitheft/',
-    '/accreditation': '/efttraining/',
-    '/anger-tap': '/programs/clear-the-weight/',
-    '/anxiety-heart': '/healyourselfwitheft/',
-    '/blog-life/blog-post-title-one-226hx': '/blog-life/',
-    '/blog-life/blog-post-title-three-dp8yj': '/blog-life/',
-    '/bodyhealingtap': '/programs/pain-relief/',
-    '/booked-out': '/about/',
-    '/bulletproof-class-may26': '/programs/bulletproof/',
-    '/chatbot-script-test': '/',
-    '/custom-eft-scripts': '/efttappingchart/',
-    '/eft-scripts': '/efttappingchart/',
-    '/eft-michael-offer': '/about/',
-    '/eftforfear': '/healyourselfwitheft/',
-    '/eftphrasesfree': 'https://healyourselfeft.com/eft-tapping-phrases',
-    '/store/p/for-enrolled-eft-students-only-1-on-1-eft-session-with-michael': '/about/',
     '/store/p/3-month-program-1': '/healyourselfwitheft/',
-    '/tapping-into-money': '/programs/unblock-your-wealth/',
-    '/tired-all-the-time': '/healyourselfwitheft/'
+    '/help-digestion': '/eft-for-digestion/',
+    '/digestiontap': '/eft-for-digestion/',
+    '/5eftdigestion': '/eft-for-digestion/',
+
+    // Free resources
+    '/eftphrasesfree': PHRASES,
+    '/eftphrasesfree-old': PHRASES,
+    '/28-phrases': PHRASES,
+    '/eft-points': '/efttappingchart/',
+    '/efttappingchart-app': '/efttappingchart/',
+    '/eftforthechakras': '/blog-life/eft-through-the-chakras/',
+    '/taoist-yoga-for-sleep': '/taoist-yoga/',
+
+    // Books
+    '/yinyangbook': '/yinyangquiz/',
+    '/boundairesearly': '/books/',
+    '/tap-products/p/the-abundant-healer-guidebook': '/books/',
+
+    // About / contact
+    '/1on1offers': '/contact/',
+    '/booked-out': '/contact/',
+    '/eft-michael-offer': '/contact/',
+    '/store/p/for-enrolled-eft-students-only-1-on-1-eft-session-with-michael': '/contact/',
+
+    // Squarespace placeholder posts
+    '/blog-life/blog-post-title-one-226hx': '/blog-life/',
+    '/blog-life/blog-post-title-three-dp8yj': '/blog-life/'
   };
-  var path = window.location.pathname.replace(/\/$/, '') || '/';
-  var dest = redirects[path] || '/efttappingchart/';
+  var path = decodeURIComponent(window.location.pathname).toLowerCase().replace(/\/+$/, '') || '/';
+  var dest = redirects[path] || '/';
   window.location.replace(dest);
 })();
 </script>
