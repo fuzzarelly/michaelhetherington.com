@@ -1,0 +1,51 @@
+<!-- Free 28 EFT phrases pop-up: opens after 15s or on exit intent, at most once every 7 days -->
+<div class="phrases-popup" id="phrases-popup" role="dialog" aria-modal="true" aria-labelledby="phrases-popup-title" hidden>
+  <div class="phrases-popup__card">
+    <button type="button" class="phrases-popup__close" aria-label="Close" data-popup-close>&times;</button>
+    <span class="badge badge--terracotta" style="margin-bottom: 14px; display: inline-block;">Free download</span>
+    <h2 id="phrases-popup-title" class="phrases-popup__title">Grab 28 of my Best EFT Phrases</h2>
+    <p class="phrases-popup__text">To help with headaches, back pain, digestive problems and more&hellip;!</p>
+    <a href="https://healyourselfeft.com/eft-tapping-phrases" class="btn-primary btn-lg phrases-popup__btn" target="_blank" rel="noopener" data-popup-close>Get the free phrases &rarr;</a>
+    <button type="button" class="phrases-popup__dismiss" data-popup-close>No thanks</button>
+  </div>
+</div>
+
+<style>
+  .phrases-popup { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 16px; background: rgba(27, 43, 75, 0.55); }
+  .phrases-popup[hidden] { display: none; }
+  .phrases-popup__card { position: relative; width: 100%; max-width: 440px; background: var(--cream); border-radius: 12px; padding: 40px 32px 28px; text-align: center; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25); }
+  .phrases-popup__title { font-size: 1.6rem; margin: 0 0 10px; color: var(--navy); }
+  .phrases-popup__text { color: var(--slate); font-size: 1.02rem; margin: 0 0 24px; }
+  .phrases-popup__btn { width: 100%; justify-content: center; }
+  .phrases-popup__close { position: absolute; top: 10px; right: 14px; background: none; border: 0; font-size: 1.8rem; line-height: 1; color: var(--slate); cursor: pointer; }
+  .phrases-popup__dismiss { margin-top: 14px; background: none; border: 0; color: var(--slate); font-size: 0.85rem; text-decoration: underline; cursor: pointer; }
+</style>
+
+<script>
+  (function() {
+    var popup = document.getElementById('phrases-popup');
+    if (!popup) return;
+    var KEY = 'phrasesPopupSeen', WEEK = 7 * 24 * 60 * 60 * 1000;
+    function seenRecently() {
+      try { return Date.now() - Number(localStorage.getItem(KEY) || 0) < WEEK; } catch (e) { return false; }
+    }
+    function remember() { try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {} }
+    var shown = false;
+    function open() {
+      if (shown || seenRecently()) return;
+      shown = true;
+      remember();
+      popup.hidden = false;
+      popup.querySelector('.phrases-popup__btn').focus();
+    }
+    function close() { popup.hidden = true; }
+    popup.addEventListener('click', function(e) {
+      if (e.target === popup || e.target.hasAttribute('data-popup-close')) close();
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+    setTimeout(open, 15000);
+    document.addEventListener('mouseout', function(e) {
+      if (!e.relatedTarget && e.clientY <= 0) open();
+    });
+  })();
+</script>

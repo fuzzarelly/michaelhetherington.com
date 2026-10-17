@@ -1025,3 +1025,6 @@ body.nav-open { overflow: hidden; }
 @media (max-width: 480px) {
   .program-price { font-size: 1.6rem; }
 }
+
+/* Class not on sale yet — restore by swapping back to <a href="{data-zylvie}"> */
+.btn-coming-soon { opacity: 0.6; cursor: default; pointer-events: none; }
