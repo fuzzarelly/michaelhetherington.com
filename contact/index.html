@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Contact | Michael Hetherington"
-description: "Contact Michael Hetherington — EFT tapping practitioner and trainer based in Brisbane, Australia and Chiang Mai, Thailand. Send a message, or connect on YouTube and Facebook."
+description: "Contact Michael Hetherington — EFT tapping practitioner and trainer based in Brisbane, Australia and Chiang Mai, Thailand. Email, or connect on YouTube and Facebook."
 canonical: "https://www.michaelhetherington.com/contact/"
 ---
 
@@ -19,35 +19,11 @@ canonical: "https://www.michaelhetherington.com/contact/"
       <div class="contact-layout">
 
         <div class="card contact-card">
-          <h2 style="font-size: 1.4rem; margin-bottom: 6px;">Send me a message</h2>
+          <h2 style="font-size: 1.4rem; margin-bottom: 12px;">Send me a message</h2>
+          <!-- Contact form temporarily removed; FormSubmit version is in git history (commit bb2dd34) -->
+          <p style="background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 20px;">The contact form is under construction. Please email me directly at <a href="mailto:info@michaelhetherington.com" style="font-weight: 600;">info@michaelhetherington.com</a></p>
           <p style="color: var(--slate); font-size: 0.95rem; margin-bottom: 24px;">Email response times are around 2–3 business days.</p>
-
-          <!-- Sent by FormSubmit (formsubmit.co) to info@michaelhetherington.com; their captcha runs after "Send". -->
-          <form class="contact-form" id="contact-form" action="https://formsubmit.co/info@michaelhetherington.com" method="POST">
-            <input type="hidden" name="_subject" id="contact-subject-line" value="New message from michaelhetherington.com">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" id="contact-next" value="https://www.michaelhetherington.com/contact/thank-you/">
-            <input type="text" name="_honey" class="contact-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-            <div class="contact-row">
-              <label>First name <span aria-hidden="true">*</span>
-                <input type="text" name="first_name" autocomplete="given-name" required>
-              </label>
-              <label>Last name <span aria-hidden="true">*</span>
-                <input type="text" name="last_name" autocomplete="family-name" required>
-              </label>
-            </div>
-            <label>Email <span aria-hidden="true">*</span>
-              <input type="email" name="email" autocomplete="email" required>
-            </label>
-            <label>Subject <span aria-hidden="true">*</span>
-              <input type="text" name="subject" id="contact-subject" required>
-            </label>
-            <label>Message <span aria-hidden="true">*</span>
-              <textarea name="message" rows="6" required></textarea>
-            </label>
-            <button type="submit" class="btn-primary btn-lg">Send message</button>
-          </form>
+          <a href="mailto:info@michaelhetherington.com" class="btn-primary btn-lg">Email me</a>
         </div>
 
         <div>
@@ -70,14 +46,3 @@ canonical: "https://www.michaelhetherington.com/contact/"
 
 </main>
 
-<script>
-  (function() {
-    var form = document.getElementById('contact-form');
-    // send people back to this site's thank-you page (works on the preview URL too)
-    document.getElementById('contact-next').value = window.location.href.replace(/contact\/?(\?.*|#.*)?$/, 'contact/thank-you/');
-    form.addEventListener('submit', function() {
-      var subj = document.getElementById('contact-subject').value.trim();
-      if (subj) document.getElementById('contact-subject-line').value = 'Website contact: ' + subj;
-    });
-  })();
-</script>
