@@ -101,8 +101,11 @@ noindex: true
     '/blog-life/blog-post-title-one-226hx': '/blog-life/',
     '/blog-life/blog-post-title-three-dp8yj': '/blog-life/'
   };
-  var path = decodeURIComponent(window.location.pathname).toLowerCase().replace(/\/+$/, '') || '/';
+  var base = '{{ site.baseurl }}'.toLowerCase(); // empty on the live domain
+  var path = decodeURIComponent(window.location.pathname).toLowerCase();
+  if (base && path.indexOf(base) === 0) path = path.slice(base.length);
+  path = path.replace(/\/+$/, '') || '/';
   var dest = redirects[path] || '/';
-  window.location.replace(dest);
+  window.location.replace(dest.charAt(0) === '/' ? base + dest : dest);
 })();
 </script>

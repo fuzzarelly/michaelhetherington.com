@@ -116,3 +116,17 @@
     if(typeof ttq!=='undefined') ttq.track('SubmitForm');
   });
 </script>
+
+{% if site.baseurl != "" %}
+<!-- Preview only (GitHub Pages project URL): prefix root-relative links with the baseurl. Inactive once baseurl is "". -->
+<script>
+  (function() {
+    var base = '{{ site.baseurl }}';
+    document.querySelectorAll('a[href^="/"], img[src^="/"]').forEach(function(el) {
+      var attr = el.tagName === 'A' ? 'href' : 'src';
+      var v = el.getAttribute(attr);
+      if (v.indexOf('//') !== 0 && v.indexOf(base + '/') !== 0) el.setAttribute(attr, base + v);
+    });
+  })();
+</script>
+{% endif %}
