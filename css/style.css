@@ -1028,3 +1028,19 @@ body.nav-open { overflow: hidden; }
 
 /* Class not on sale yet — restore by swapping back to <a href="{data-zylvie}"> */
 .btn-coming-soon { opacity: 0.6; cursor: default; pointer-events: none; }
+
+/* Contact form */
+.contact-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.contact-form label { display: flex; flex-direction: column; gap: 6px; font-size: 0.92rem; font-weight: 600; color: var(--navy); }
+.contact-form label span { color: var(--terracotta); }
+.contact-form input, .contact-form textarea { width: 100%; padding: 12px 14px; font-size: 1rem; font-weight: 400; color: inherit; background: #fff; border: 1px solid var(--border); border-radius: 6px; }
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--terracotta); outline-offset: 1px; border-color: transparent; }
+.contact-form textarea { resize: vertical; min-height: 140px; }
+.contact-form button { align-self: flex-start; }
+.contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+@media (max-width: 768px) {
+  .contact-layout, .contact-row { grid-template-columns: 1fr; }
+  .contact-form button { align-self: stretch; }
+}
