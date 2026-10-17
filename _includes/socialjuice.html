@@ -1,0 +1,12 @@
+{%- comment -%}
+  SocialJuice testimonial widget.
+  Usage: {% include socialjuice.html type="carousel" id="4844" %}   (type: carousel | wall)
+  Widgets (account 6981): carousel 4844 = class reviews, 5037/4836 = healing stories,
+  4888 = classes + healing; wall 4766 = all reviews, 4886 = practitioner training,
+  5515 = Heal Yourself with EFT, 5516 = digestion program.
+{%- endcomment -%}
+{%- assign sj_id = "socialjuice-" | append: include.type | append: "-michaelhetherington-" | append: include.id -%}
+<div class="socialjuice-embed">
+  <iframe id="{{ sj_id }}" src="https://embed.socialjuice.io/{{ include.type }}/6981?s=michaelhetherington&amp;id={{ include.id }}&amp;custom=true" title="Testimonials for Michael Hetherington" allowtransparency="true" frameborder="0" scrolling="no" width="100%" height="{% if include.type == 'wall' %}575{% else %}380{% endif %}" loading="lazy" style="border: 0; display: block; width: 100%;"></iframe>
+</div>
+<script src="https://embed.socialjuice.io/js/iframeResizer.min.js" async onload="iFrameResize({log: false, checkOrigin: false}, '#{{ sj_id }}')"></script>
