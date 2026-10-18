@@ -1,252 +1,296 @@
 ---
 layout: default
 title: "Michael Hetherington | EFT Tapping Practitioner, Trainer & Educator"
-description: "Clear the emotional root of anxiety, stress, chronic pain, and gut issues with EFT Tapping. Online programs, 90-minute classes, and accredited practitioner training from Brisbane and Chiang Mai."
+description: "Clear the emotional root of anxiety, stress, chronic pain, and gut issues with EFT Tapping. Online programs, 90-minute classes, and accredited practitioner training."
 canonical: "https://www.michaelhetherington.com/"
 ---
-
+{%- assign videos_page = site.pages | where: "url", "/videos/" | first -%}
+{%- if videos_page -%}{%- assign videos_url = "/videos/" -%}{%- else -%}{%- assign videos_url = "https://www.youtube.com/@michaelhetherington/videos" -%}{%- endif -%}
+{%- assign phrases = "https://healyourselfeft.com/eft-tapping-phrases" -%}
 <main>
 
- <!-- ── Hero ─────────────────────────────────────────────────── -->
- <section class="section-dark text-center">
- <div class="container">
- <span class="badge badge--outline-light mb-sm">EFT Tapping Specialist · Brisbane &amp; Chiang Mai</span>
- <h1 style="margin-top: 16px; margin-bottom: 20px; font-size: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
- Clear the emotional root of your anxiety, stress, and chronic symptoms.
- </h1>
- <p class="mx-auto mb-md" style="max-width: 620px; font-size: 1.15rem; color: rgba(250,247,242,0.85);">
- EFT Tapping combines nervous system science, Chinese medicine and modern psychology to clear emotional stress driving your symptoms. Not another coping tool - a way to get to the root.
- </p>
- <div class="flex flex-center flex-wrap gap-md">
- <a href="/programs/" class="btn-primary btn-lg">Explore Programs</a>
- <a href="https://healyourselfeft.com/eft-tapping-phrases" class="btn-secondary--light btn-secondary btn-lg" target="_blank" rel="noopener">Grab 28 Best EFT Phrases</a>
- </div>
- </div>
- </section>
+  <!-- 1. Hero -->
+  <section class="mh-hero">
+    <div class="container mh-hero-grid">
+      <div class="mh-hero-text">
+        <span class="mh-eyebrow">EFT tapping · Chinese medicine · nervous system science</span>
+        <h1>Clear the emotional root of your anxiety, stress and <em>chronic symptoms.</em></h1>
+        <p class="mh-hero-sub">Not another coping tool. A simple, research-backed way to clear the stress your body has been holding onto for years.</p>
+        <div class="mh-btn-row">
+          <a href="{{ phrases }}" class="btn-primary btn-lg" target="_blank" rel="noopener">Get the free 28 tapping phrases</a>
+          <a href="{{ videos_url }}" class="btn-outline-light btn-lg"{% unless videos_page %} target="_blank" rel="noopener"{% endunless %}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            Watch a free tapping video
+          </a>
+        </div>
+      </div>
+      <div class="mh-portrait">
+        <picture>
+          <source srcset="/assets/images/michael-hetherington.webp" type="image/webp">
+          <img src="/assets/images/michael-hetherington.jpg" alt="Michael Hetherington, EFT tapping practitioner and Chinese medicine acupuncturist" width="1200" height="1200" fetchpriority="high">
+        </picture>
+        <div class="mh-portrait-card">
+          <strong>Michael Hetherington</strong>
+          <span>Bachelor of Health Science (Chinese Medicine) · IICT-accredited EFT trainer</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
- <!-- ── Trust Bar ─────────────────────────────────────────────── -->
- <div class="trust-bar">
- <div class="trust-bar-inner">
- <div class="trust-item">40,000+ YouTube Subscribers</div>
- <div class="trust-item">IICT Accredited Practitioner &amp; Trainer</div>
- <div class="trust-item">Evidence-Based EFT</div>
- <div class="trust-item">Brisbane &amp; Chiang Mai</div>
- </div>
- </div>
+  <!-- 2. Proof bar -->
+  <section class="mh-proof" aria-label="At a glance">
+    <div class="container mh-proof-grid">
+      <div><strong>42,000+</strong><span>YouTube subscribers</span></div>
+      <div><strong>1.7M+</strong><span>video views</span></div>
+      <div><strong>800+</strong><span>reviews</span></div>
+      <div><strong>10+ years</strong><span>in clinical practice</span></div>
+    </div>
+  </section>
 
- <!-- ── Three Paths ───────────────────────────────────────────── -->
- <section class="section-light">
- <div class="container">
- <h2 class="text-center mb-md">Where do you want to start?</h2>
- <div class="grid-3">
+  <!-- 3. Start here -->
+  <section class="mh-section">
+    <div class="container">
+      <div class="mh-center">
+        <span class="mh-eyebrow">Start here</span>
+        <h2>What would you like help with?</h2>
+      </div>
+      <div class="mh-cards-3">
+        <a href="https://healyourselfeft.com/" class="mh-img-card" target="_blank" rel="noopener">
+          <img src="/assets/images/anxiety-class.webp" alt="Woman with eyes closed tapping beside her eye" width="1200" height="600" loading="lazy">
+          <div class="mh-img-card-body">
+            <span class="mh-tag">30-day program</span>
+            <h3>Heal yourself</h3>
+            <p>Clear the emotional patterns stored in your nervous system that keep driving anxiety, pain and stress.</p>
+            <span class="mh-link">Explore the program &rarr;</span>
+          </div>
+        </a>
+        <a href="https://healyourdigestioneft.com/quiz.html" class="mh-img-card" target="_blank" rel="noopener">
+          <img src="/assets/images/gut-calm.webp" alt="Hands resting on the stomach with the digestive system illustrated" width="1200" height="1200" loading="lazy">
+          <div class="mh-img-card-body">
+            <span class="mh-tag">Gut health</span>
+            <h3>Heal your digestion</h3>
+            <p>Bloating, IBS and gut pain are often nervous system problems as much as digestive ones.</p>
+            <span class="mh-link">Take the 60-second quiz &rarr;</span>
+          </div>
+        </a>
+        <a href="https://eftpractitionertraining.com/" class="mh-img-card" target="_blank" rel="noopener">
+          <img src="/assets/images/eft-training-certificate.webp" alt="Sample EFT Level 1 and 2 practitioner certificate" width="586" height="418" loading="lazy">
+          <div class="mh-img-card-body">
+            <span class="mh-tag">Accredited training</span>
+            <h3>Become a practitioner</h3>
+            <p>IICT-accredited EFT certification, fully online and self-paced, for therapists, coaches and health practitioners.</p>
+            <span class="mh-link">See the training &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
- <div class="card">
- <span class="badge badge--terracotta">Self-healing</span>
- <h3 style="margin: 14px 0 10px;">Heal yourself</h3>
- <p>You have tried the usual approaches and got partial relief at best. EFT addresses what those missed, the emotional patterns stored in your nervous system that keep driving your symptoms.</p>
- <a href="https://healyourselfeft.com/" class="btn-primary btn-sm" style="margin-top: 16px; display: inline-flex;" target="_blank" rel="noopener">Explore programs &rarr;</a>
- </div>
+  <!-- 4. Free video spotlight -->
+  <section class="mh-section section-sand">
+    <div class="container mh-spotlight">
+      <div class="yt-embed" id="spotlight-player">
+        <button type="button" data-yt-play="ltoPPXb9Zmg" data-yt-title="Supercharge Your Body Healing in 5 Minutes" aria-label="Play video: Supercharge Your Body Healing in 5 Minutes">
+          <img src="https://i.ytimg.com/vi/ltoPPXb9Zmg/maxresdefault.jpg" data-yt-thumb="ltoPPXb9Zmg" alt="" width="1280" height="720" loading="lazy">
+          <span class="yt-play" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+      </div>
+      <div>
+        <span class="mh-eyebrow">Try it now · 6 minutes</span>
+        <h2>Tap along with me. Feel the difference in your body.</h2>
+        <p>My most-watched session, with almost 90,000 views. No experience needed. Just follow along.</p>
+        <a class="mh-vrow" href="https://www.youtube.com/watch?v=pTlFYeMZGJE" data-yt-target="spotlight-player" data-yt-id="pTlFYeMZGJE" data-yt-title="5 Minute EFT: Instant Anxiety and Stress Relief">
+          <img src="https://i.ytimg.com/vi/pTlFYeMZGJE/maxresdefault.jpg" data-yt-thumb="pTlFYeMZGJE" alt="" width="320" height="180" loading="lazy">
+          <span>5 Minute EFT: Instant Anxiety and Stress Relief</span>
+        </a>
+        <a class="mh-vrow" href="https://www.youtube.com/watch?v=8wUFaJOvkC4" data-yt-target="spotlight-player" data-yt-id="8wUFaJOvkC4" data-yt-title="How to Improve Your Digestion and Gut Health">
+          <img src="https://i.ytimg.com/vi/8wUFaJOvkC4/maxresdefault.jpg" data-yt-thumb="8wUFaJOvkC4" alt="" width="320" height="180" loading="lazy">
+          <span>How to Improve Your Digestion and Gut Health</span>
+        </a>
+        <a class="mh-vrow" href="https://www.youtube.com/watch?v=5DcXj_7Xeno" data-yt-target="spotlight-player" data-yt-id="5DcXj_7Xeno" data-yt-title="Sleep Like a Baby: EFT for Insomnia">
+          <img src="https://i.ytimg.com/vi/5DcXj_7Xeno/maxresdefault.jpg" data-yt-thumb="5DcXj_7Xeno" alt="" width="320" height="180" loading="lazy">
+          <span>Sleep Like a Baby: EFT for Insomnia</span>
+        </a>
+        <a href="{{ videos_url }}" class="mh-link"{% unless videos_page %} target="_blank" rel="noopener"{% endunless %}>See all free tapping videos &rarr;</a>
+      </div>
+    </div>
+  </section>
 
- <div class="card">
- <span class="badge badge--sage">Digestion</span>
- <h3 style="margin: 14px 0 10px;">Heal your digestion</h3>
- <p>Bloating, IBS, chronic gut pain, these are often nervous system problems as much as digestive ones. My work sits at the intersection of Chinese medicine and EFT to address the root.</p>
- <a href="https://healyourdigestioneft.com/" class="btn-primary btn-sm" style="margin-top: 16px; display: inline-flex;" target="_blank" rel="noopener">Digestion program &rarr;</a>
- </div>
+  <!-- 5. 28 phrases band -->
+  <section class="mh-section">
+    <div class="container">
+      <div class="mh-band">
+        <img src="/assets/images/tapping-phrases-cover.webp" alt="The free guide: 28 Powerful EFT Statements" width="840" height="630" loading="lazy">
+        <div>
+          <span class="mh-eyebrow">Free guide</span>
+          <h2>You know where to tap. Here's exactly what to say.</h2>
+          <p>One 28-line tapping script that takes you from &ldquo;I really don't like this&rdquo; to &ldquo;I can let it go&rdquo;.</p>
+          <a href="{{ phrases }}" class="btn-primary btn-lg" target="_blank" rel="noopener">Get the free 28 phrases</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
- <div class="card">
- <span class="badge badge--navy">Professional training</span>
- <h3 style="margin: 14px 0 10px;">Become a practitioner</h3>
- <p>Add accredited EFT certification to your existing practice, or start a new career in emotional and somatic healing. IICT-recognised training, fully self-paced online.</p>
- <a href="https://eftpractitionertraining.com/" class="btn-primary btn-sm" style="margin-top: 16px; display: inline-flex;" target="_blank" rel="noopener">EFT training &rarr;</a>
- </div>
+  <!-- 6. How EFT works -->
+  <section class="mh-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="mh-center">
+        <span class="mh-eyebrow">How EFT works</span>
+        <h2>Find the root. Clear the backlog. Restore flow.</h2>
+      </div>
+      <div class="mh-steps">
+        <div class="mh-step">
+          <div class="mh-step-num">1</div>
+          <h3>Find the root</h3>
+          <p>Most symptoms trace back to unprocessed emotional material stored in the body.</p>
+        </div>
+        <div class="mh-step">
+          <div class="mh-step-num">2</div>
+          <h3>Clear the backlog</h3>
+          <p>EFT uses acupressure points combined with cognitive processing to clear stored stress from the nervous system.</p>
+        </div>
+        <div class="mh-step">
+          <div class="mh-step-num">3</div>
+          <h3>Restore flow</h3>
+          <p>When the emotional backlog clears, symptoms resolve at the root rather than being managed at the surface.</p>
+        </div>
+      </div>
+      <p class="mh-after"><a href="/blog-life/decoding-the-science-the-magic-of-clinical-eft-tapping/" class="mh-link">Read: the science behind EFT tapping &rarr;</a></p>
+    </div>
+  </section>
 
- </div>
- </div>
- </section>
+  <!-- 7. Classes -->
+  <section class="mh-section section-sand">
+    <div class="container">
+      <div class="mh-center">
+        <span class="mh-eyebrow">90-minute classes</span>
+        <h2>Learn, tap and feel the shift</h2>
+        <p>Each class targets one problem with guided EFT, Chinese medicine context and a workbook. $47 each, lifetime access.</p>
+      </div>
+      <div class="mh-tiles">
+        <a href="/programs/bulletproof/" class="mh-tile"><span class="mh-tag">Coming soon</span><h3>Emotionally Bulletproof</h3><p>Stop emotional overwhelm from running your life.</p></a>
+        <a href="/programs/clear-the-weight/" class="mh-tile"><span class="mh-tag">Coming soon</span><h3>Clear the Weight</h3><p>Release resentment and relationship stress.</p></a>
+        <a href="/programs/pain-relief/" class="mh-tile"><span class="mh-tag">Coming soon</span><h3>EFT for Pain Relief</h3><p>A 4-layer approach to chronic pain.</p></a>
+        <a href="/programs/food-sensitivities/" class="mh-tile"><span class="mh-tag">Coming soon</span><h3>EFT for Food Sensitivities</h3><p>Calm food reactions and bloating at the root.</p></a>
+        <a href="/programs/unlock-deep-rest/" class="mh-tile"><span class="mh-tag">Coming soon</span><h3>Unlock Deep Rest</h3><p>Settle the nervous system that keeps you awake.</p></a>
+        <a href="/programs/trauma-informed-eft/" class="mh-tile"><span class="mh-tag">Coming soon</span><h3>Trauma-Informed EFT</h3><p>10 gentle tools for clearing trauma.</p></a>
+        <a href="/programs/unblock-your-wealth/" class="mh-tile"><span class="mh-tag">Coming soon</span><h3>Unblock Your Wealth</h3><p>Clear 77 limiting money beliefs.</p></a>
+        <a href="/programs/headache-migraine-relief/" class="mh-tile"><span class="mh-tag">Coming soon</span><h3>Headaches &amp; Migraines</h3><p>Clear the 4 Chinese medicine headache types.</p></a>
+      </div>
+      <div class="mh-tiles-cta">
+        <strong>Want to know when they open?</strong>
+        <a href="{{ phrases }}" class="btn-outline" target="_blank" rel="noopener">Join the list (free 28 phrases)</a>
+        <a href="/classes/" class="mh-link">See all classes &rarr;</a>
+      </div>
+    </div>
+  </section>
 
- <!-- ── How It Works ──────────────────────────────────────────── -->
- <section class="section-dark">
- <div class="container text-center">
- <h2>How EFT Tapping works</h2>
- <div class="steps-grid">
- <div class="step">
- <div class="step-number">1</div>
- <h3>Find the root</h3>
- <p style="color: rgba(250,247,242,0.8);">Most symptoms trace back to unprocessed emotional material stored in the body.</p>
- </div>
- <div class="step">
- <div class="step-number">2</div>
- <h3>Clear the backlog</h3>
- <p style="color: rgba(250,247,242,0.8);">EFT uses acupressure points combined with cognitive processing to clear stored stress from the nervous system.</p>
- </div>
- <div class="step">
- <div class="step-number">3</div>
- <h3>Restore flow</h3>
- <p style="color: rgba(250,247,242,0.8);">When the emotional backlog clears, symptoms resolve at the root rather than being managed at the surface.</p>
- </div>
- </div>
- </div>
- </section>
+  <!-- 8. Reviews -->
+  <section class="mh-section">
+    <div class="container">
+      <div class="mh-center">
+        <span class="mh-eyebrow">Reviews</span>
+        <h2>What people say</h2>
+      </div>
+      <div class="mh-quotes">
+        <figure class="mh-quote">
+          <blockquote>&ldquo;He has an uncanny ability to draw out what's at the root of my challenges.&rdquo;</blockquote>
+          <figcaption>Justin Lee, USA</figcaption>
+        </figure>
+        <figure class="mh-quote">
+          <blockquote>&ldquo;My digestive problems have lessened. EFT has become an essential tool in my daily life.&rdquo;</blockquote>
+          <figcaption>Paula West M.D., USA</figcaption>
+        </figure>
+        <figure class="mh-quote">
+          <blockquote>&ldquo;Michael is an amazing and gifted healer. Highly recommended.&rdquo;</blockquote>
+          <figcaption>Simon Smith, Australia</figcaption>
+        </figure>
+      </div>
+      {% include socialjuice.html type="carousel" id="5037" %}
+      <p class="mh-after"><a href="/reviews/" class="mh-link">Read more reviews &rarr;</a></p>
+    </div>
+  </section>
 
- <!-- ── Programs Strip ────────────────────────────────────────── -->
- <section class="section-light">
- <div class="container">
- <h2 class="text-center mb-sm">90-minute classes: learn, tap, and feel the shift</h2>
- <p class="text-center text-muted mb-md">Instant lifetime access after purchase. Each class targets a specific pain point with EFT sequences, Chinese medicine context, and nervous system science.</p>
- <div class="grid-3" style="gap: 24px;">
+  <!-- 9. About -->
+  <section class="mh-section section-sand">
+    <div class="container mh-about">
+      <picture>
+        <source srcset="/assets/images/michael-hetherington.webp" type="image/webp">
+        <img src="/assets/images/michael-hetherington.jpg" alt="Michael Hetherington" width="1200" height="1200" loading="lazy">
+      </picture>
+      <div>
+        <span class="mh-eyebrow">About Michael</span>
+        <h2>Chinese medicine practitioner. EFT trainer. Lifelong student of the body.</h2>
+        <p>I trained in Traditional Chinese Medicine and first came across EFT tapping during my acupuncture studies. It was faster and more effective with emotional patterns than anything I had seen. Since 2015 I have focused on EFT full-time, blending it with Chinese medicine, somatic awareness and nervous system science, and training practitioners to do the same.</p>
+        <div class="mh-pills">
+          <span>Bachelor of Health Science (Chinese Medicine)</span>
+          <span>Postgraduate Certificate in Counselling &amp; Education</span>
+          <span>IICT-accredited EFT trainer</span>
+        </div>
+        <a href="/about/" class="mh-link">Read my story &rarr;</a>
+      </div>
+    </div>
+  </section>
 
- <div class="product-card">
- <span class="badge badge--terracotta">$47</span>
- <h3>Emotionally Bulletproof</h3>
- <p>5 steps to regulate your nervous system and stop emotional overwhelm from running your life.</p>
- <span class="btn-primary btn-sm btn-coming-soon" data-zylvie="https://zylvie.com/michaelhetherington/p/bulletproof" aria-disabled="true">Coming soon</span>
- <p class="product-card-meta">Instant access · 90 minutes · Lifetime access</p>
- </div>
+  <!-- 10. From the blog -->
+  <section class="mh-section">
+    <div class="container">
+      <div class="mh-center">
+        <span class="mh-eyebrow">Free articles</span>
+        <h2>From the blog</h2>
+      </div>
+      <div class="mh-cards-3">
+        <a href="/blog-life/eft-tapping-for-headaches-and-migraines/" class="mh-post-card">
+          <img src="https://i.ytimg.com/vi/1KkndDa0aKg/maxresdefault.jpg" data-yt-thumb="1KkndDa0aKg" alt="" width="1280" height="720" loading="lazy">
+          <div class="mh-post-card-body">
+            <div class="mh-post-meta"><span class="mh-tag">Body healing</span><span>7 min read</span></div>
+            <h3>EFT Tapping for Headaches and Migraines</h3>
+          </div>
+        </a>
+        <a href="/blog-life/how-long-do-i-need-to-do-eft-tapping-for/" class="mh-post-card">
+          <img src="https://i.ytimg.com/vi/Dfp3YzRmTjo/maxresdefault.jpg" data-yt-thumb="Dfp3YzRmTjo" alt="" width="1280" height="720" loading="lazy">
+          <div class="mh-post-card-body">
+            <div class="mh-post-meta"><span class="mh-tag">Technique</span><span>5 min read</span></div>
+            <h3>How Long Do I Need to Do EFT Tapping?</h3>
+          </div>
+        </a>
+        <a href="/blog-life/surrogate-eft-tapping/" class="mh-post-card">
+          <img src="https://i.ytimg.com/vi/NHMrzwC_Y1I/maxresdefault.jpg" data-yt-thumb="NHMrzwC_Y1I" alt="" width="1280" height="720" loading="lazy">
+          <div class="mh-post-card-body">
+            <div class="mh-post-meta"><span class="mh-tag">Technique</span><span>4 min read</span></div>
+            <h3>Surrogate EFT Tapping: How to Heal Friends and Family</h3>
+          </div>
+        </a>
+      </div>
+      <p class="mh-after"><a href="/blog-life/" class="mh-link">All articles &rarr;</a></p>
+    </div>
+  </section>
 
- <div class="product-card">
- <span class="badge badge--terracotta">$47</span>
- <h3>Clear the Weight</h3>
- <p>Release the resentment, conflict, and relationship stress you have been carrying.</p>
- <span class="btn-primary btn-sm btn-coming-soon" data-zylvie="https://zylvie.com/michaelhetherington/p/clear-the-weight" aria-disabled="true">Coming soon</span>
- <p class="product-card-meta">Instant access · 90 minutes · Lifetime access</p>
- </div>
+  <!-- 11. Final CTA -->
+  <section class="mh-section mh-final">
+    <div class="container">
+      <h2>Start with the words that make tapping work</h2>
+      <a href="{{ phrases }}" class="btn-primary btn-lg" target="_blank" rel="noopener">Get the free 28 phrases</a>
+    </div>
+  </section>
 
- <div class="product-card">
- <span class="badge badge--terracotta">$47</span>
- <h3>EFT for Pain Relief</h3>
- <p>A 4-layer body-based approach for people with chronic pain who want long-term relief.</p>
- <span class="btn-primary btn-sm btn-coming-soon" data-zylvie="https://zylvie.com/michaelhetherington/p/eft-pain-relief" aria-disabled="true">Coming soon</span>
- <p class="product-card-meta">Instant access · 90 minutes · Lifetime access</p>
- </div>
-
- <div class="product-card">
- <span class="badge badge--terracotta">$47</span>
- <h3>EFT for Food Sensitivities</h3>
- <p>Address the nervous system root of food reactions, bloating, and gut-related immune responses.</p>
- <span class="btn-primary btn-sm btn-coming-soon" data-zylvie="https://zylvie.com/michaelhetherington/p/eft-food-sensitivities" aria-disabled="true">Coming soon</span>
- <p class="product-card-meta">Instant access · 90 minutes · Lifetime access</p>
- </div>
-
- <div class="product-card">
- <span class="badge badge--terracotta">$47</span>
- <h3>Unlock Deep Rest</h3>
- <p>Heal the anxiety and nervous system dysregulation keeping you awake.</p>
- <span class="btn-primary btn-sm btn-coming-soon" data-zylvie="https://zylvie.com/michaelhetherington/p/unlock-deep-rest" aria-disabled="true">Coming soon</span>
- <p class="product-card-meta">Instant access · 90 minutes · Lifetime access</p>
- </div>
-
- <div class="product-card">
- <span class="badge badge--terracotta">$47</span>
- <h3>Trauma-Informed EFT</h3>
- <p>10 gentle, evidence-based tools for clearing trauma without overwhelm.</p>
- <span class="btn-primary btn-sm btn-coming-soon" data-zylvie="https://zylvie.com/michaelhetherington/p/trauma-informed-eft" aria-disabled="true">Coming soon</span>
- <p class="product-card-meta">Instant access · 90 minutes · Lifetime access</p>
- </div>
-
- <div class="product-card">
- <span class="badge badge--terracotta">$47</span>
- <h3>Unblock Your Wealth</h3>
- <p>Clear 77 limiting money beliefs with EFT.</p>
- <span class="btn-primary btn-sm btn-coming-soon" data-zylvie="https://zylvie.com/michaelhetherington/p/unblock-your-wealth" aria-disabled="true">Coming soon</span>
- <p class="product-card-meta">Instant access · 90 minutes · Lifetime access</p>
- </div>
-
- <div class="product-card">
- <span class="badge badge--terracotta">$47</span>
- <h3>Headaches &amp; Migraines</h3>
- <p>The 4 types of headaches according to Chinese medicine and how to clear each one.</p>
- <span class="btn-primary btn-sm btn-coming-soon" data-zylvie="https://zylvie.com/michaelhetherington/p/eft-headaches-migraines" aria-disabled="true">Coming soon</span>
- <p class="product-card-meta">Instant access · 90 minutes · Lifetime access</p>
- </div>
-
- <div class="card card--flat" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
- <h3 style="margin-bottom: 10px;">See all classes</h3>
- <p style="font-size: 0.92rem; color: #555;">Full descriptions, bullet-point breakdowns, and what each class covers.</p>
- <a href="/classes/" class="btn-secondary btn-sm" style="margin-top: 16px;">View all classes &rarr;</a>
- </div>
-
- </div>
- </div>
- </section>
-
- <!-- ── Testimonials ──────────────────────────────────────────── -->
- <section class="section-white">
- <div class="container">
- <h2 class="text-center mb-md">What people say</h2>
- {% include socialjuice.html type="carousel" id="5037" %}
- <div class="text-center mt-md">
- <a href="/reviews/" class="btn-secondary">Read more reviews &rarr;</a>
- </div>
- </div>
- </section>
-
- <!-- ── YouTube ───────────────────────────────────────────────── -->
- <section class="section-dark text-center">
- <div class="container">
- <h2 class="mb-sm">The Taoist Tapper on YouTube</h2>
- <p class="mx-auto mb-md" style="max-width: 560px; color: rgba(250,247,242,0.82);">
- 40,000 subscribers. Free EFT tapping sessions, Chinese medicine insights, and nervous system education.
- </p>
- <a href="https://www.youtube.com/@TheTaoistTapper"
- class="btn-primary btn-lg"
- target="_blank"
- rel="noopener noreferrer">Visit the channel</a>
- </div>
- </section>
-
- <!-- ── Blog Preview ──────────────────────────────────────────── -->
- <section class="section-light">
- <div class="container">
- <h2 class="text-center mb-md">From the blog</h2>
- <div class="grid-3">
-
- <a href="/blog-life/how-long-do-i-need-to-do-eft-tapping-for/" class="card blog-card">
- <span class="badge badge--sage">EFT Basics</span>
- <h3 style="margin: 14px 0 10px; font-size: 1.15rem;">How Long Do I Need to Do EFT Tapping?</h3>
- <p style="font-size: 0.92rem; color: #555;">The difference between urgent and therapeutic tapping, and the timeframes that actually produce lasting change.</p>
- <span style="font-size: 0.88rem; color: var(--terracotta); margin-top: 8px; display: block;">Read more &rarr;</span>
- </a>
-
- <a href="/blog-life/eft-tapping-for-headaches-and-migraines/" class="card blog-card">
- <span class="badge badge--sage">Pain Relief</span>
- <h3 style="margin: 14px 0 10px; font-size: 1.15rem;">EFT Tapping for Headaches and Migraines</h3>
- <p style="font-size: 0.92rem; color: #555;">How to use the "chasing the pain" method for fast relief, plus the Chinese medicine root causes behind recurring headaches.</p>
- <span style="font-size: 0.88rem; color: var(--terracotta); margin-top: 8px; display: block;">Read more &rarr;</span>
- </a>
-
- <a href="/blog-life/surrogate-eft-tapping/" class="card blog-card">
- <span class="badge badge--sage">Technique</span>
- <h3 style="margin: 14px 0 10px; font-size: 1.15rem;">Surrogate EFT Tapping: How and Why It Works</h3>
- <p style="font-size: 0.92rem; color: #555;">How to support friends, family, and even animals with EFT, even when they are not in the room with you.</p>
- <span style="font-size: 0.88rem; color: var(--terracotta); margin-top: 8px; display: block;">Read more &rarr;</span>
- </a>
-
- </div>
- <div class="text-center mt-md">
- <a href="/blog-life/" class="btn-secondary">All articles &rarr;</a>
- </div>
- </div>
- </section>
-
- <script type="application/ld+json">
- {
- "@context": "https://schema.org",
- "@graph": [
- {
- "@type": "Person",
- "name": "Michael Hetherington",
- "jobTitle": "EFT Practitioner and Trainer",
- "url": "https://www.michaelhetherington.com",
- "sameAs": ["https://www.youtube.com/@TheTaoistTapper"]
- },
- {
- "@type": "WebSite",
- "name": "Michael Hetherington",
- "url": "https://www.michaelhetherington.com"
- }
- ]
- }
- </script>
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Michael Hetherington",
+        "jobTitle": "EFT Practitioner and Trainer",
+        "url": "https://www.michaelhetherington.com",
+        "sameAs": ["https://www.youtube.com/@michaelhetherington"]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Michael Hetherington",
+        "url": "https://www.michaelhetherington.com"
+      }
+    ]
+  }
+  </script>
 </main>

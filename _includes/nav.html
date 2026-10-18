@@ -1,60 +1,36 @@
+{%- comment -%} "Free videos" goes to /videos/ once that page exists, otherwise to the YouTube channel {%- endcomment -%}
+{%- assign videos_page = site.pages | where: "url", "/videos/" | first -%}
 <header class="site-nav" role="banner">
- <div class="nav-inner">
+  <div class="nav-inner">
 
- <a href="/" class="nav-logo" aria-label="Michael Hetherington, Home">
- Michael Hetherington
- </a>
+    <a href="/" class="nav-logo" aria-label="Michael Hetherington, home">
+      Michael Hetherington
+    </a>
 
- <ul class="nav-menu" id="nav-menu" role="list">
- <li>
- <a href="/about/"
- class="nav-link{% if page.url contains '/about/' %} is-active{% endif %}">
- About
- </a>
- </li>
- <li>
- <a href="/programs/"
- class="nav-link{% if page.url == '/programs/' %} is-active{% endif %}">
- Programs
- </a>
- </li>
- <li>
- <a href="/classes/"
- class="nav-link{% if page.url contains '/classes/' %} is-active{% endif %}">
- Classes
- </a>
- </li>
- <li>
- <a href="https://eftpractitionertraining.com/"
- class="nav-link" target="_blank" rel="noopener">
- EFT Training
- </a>
- </li>
- <li>
- <a href="/contact/"
- class="nav-link{% if page.url contains '/contact/' %} is-active{% endif %}">
- Contact
- </a>
- </li>
- <li>
- <a href="https://healyourselfeft.com/eft-tapping-phrases"
- class="btn-primary nav-cta"
- target="_blank"
- rel="noopener">
- Get 28 Best EFT Phrases
- </a>
- </li>
- </ul>
+    <ul class="nav-menu" id="nav-menu" role="list">
+      <li><a href="/programs/" class="nav-link{% if page.url == '/programs/' %} is-active{% endif %}">Programs</a></li>
+      <li><a href="/classes/" class="nav-link{% if page.url contains '/classes/' %} is-active{% endif %}">Classes</a></li>
+      {%- if videos_page %}
+      <li><a href="/videos/" class="nav-link{% if page.url contains '/videos/' %} is-active{% endif %}">Free videos</a></li>
+      {%- else %}
+      <li><a href="https://www.youtube.com/@michaelhetherington/videos" class="nav-link" target="_blank" rel="noopener">Free videos</a></li>
+      {%- endif %}
+      <li><a href="/blog-life/" class="nav-link{% if page.url contains '/blog-life/' %} is-active{% endif %}">Blog</a></li>
+      <li><a href="/about/" class="nav-link{% if page.url contains '/about/' %} is-active{% endif %}">About</a></li>
+      <li>
+        <a href="https://healyourselfeft.com/eft-tapping-phrases" class="btn-primary nav-cta" target="_blank" rel="noopener">Free 28 Phrases</a>
+      </li>
+    </ul>
 
- <button class="nav-hamburger"
- id="nav-hamburger"
- aria-label="Toggle navigation menu"
- aria-expanded="false"
- aria-controls="nav-menu">
- <span aria-hidden="true"></span>
- <span aria-hidden="true"></span>
- <span aria-hidden="true"></span>
- </button>
+    <button class="nav-hamburger"
+            id="nav-hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="nav-menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
 
- </div>
+  </div>
 </header>
