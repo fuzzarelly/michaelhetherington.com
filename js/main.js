@@ -120,6 +120,34 @@
     } catch (err) { /* never block the click */ }
   }, true);
 
+  /* ── Class checkout tracking (GA4 begin_checkout) ──────────
+     Sends begin_checkout before leaving for Zylvie. Beacon transport survives the
+     page change; the timeout still navigates if gtag never calls back (ad blockers). */
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[data-cta="class_buy"]');
+    if (!link || typeof window.gtag !== 'function') return;
+    try {
+      var h1 = document.querySelector('h1');
+      var name = h1 ? h1.textContent.replace(/\s+/g, ' ').trim() : document.title;
+      var href = link.href;
+      var newTab = e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0;
+      var gone = false;
+      var go = function () { if (!gone) { gone = true; window.location.href = href; } };
+      var params = {
+        currency: 'USD',
+        value: 47,
+        items: [{ item_id: link.getAttribute('data-product'), item_name: name, price: 47 }],
+        transport_type: 'beacon'
+      };
+      if (!newTab) {
+        e.preventDefault();
+        params.event_callback = go;
+        setTimeout(go, 1000);
+      }
+      window.gtag('event', 'begin_checkout', params);
+    } catch (err) { /* never block the click */ }
+  });
+
   /* ── Dynamic footer year ────────────────────────────────────── */
   var yearEl = document.getElementById('footer-year');
   if (yearEl) {
