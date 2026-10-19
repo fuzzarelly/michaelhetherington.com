@@ -108,6 +108,18 @@
     }
   });
 
+  /* ── Opt-in click tracking (GA4 via GTM-PN7X8BW) ───────────
+     Pushes optin_click to the dataLayer. In GTM: Custom Event trigger "optin_click"
+     -> GA4 Event tag with link_location and page_path from Data Layer Variables. */
+  document.addEventListener('click', function (e) {
+    try {
+      var link = e.target.closest('[data-optin-location]');
+      if (!link) return;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'optin_click', link_location: link.getAttribute('data-optin-location'), page_path: location.pathname });
+    } catch (err) { /* never block the click */ }
+  }, true);
+
   /* ── Dynamic footer year ────────────────────────────────────── */
   var yearEl = document.getElementById('footer-year');
   if (yearEl) {
