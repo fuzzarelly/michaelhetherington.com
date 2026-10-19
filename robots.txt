@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /class-access/
 
 Sitemap: https://www.michaelhetherington.com/sitemap.xml
