@@ -1,0 +1,120 @@
+---
+layout: default
+title: "Free EFT Tapping Videos | Michael Hetherington"
+description: "Free EFT tapping videos for anxiety, stress, digestion, sleep and body healing. Tap along with Chinese medicine practitioner Michael Hetherington."
+canonical: "https://www.michaelhetherington.com/videos/"
+---
+{%- assign videos = site.data.videos | where_exp: "v", "v.groups.size > 0" | sort: "order" -%}
+<main>
+
+  <section class="mh-hero mh-hero--simple">
+    <div class="container">
+      <span class="mh-eyebrow">1.7 million views · 600+ videos</span>
+      <h1>Free EFT tapping videos</h1>
+      <p class="mh-hero-sub">Pick what you're feeling and tap along with me. Most sessions take 5 to 12 minutes.</p>
+      <div class="mh-btn-row" style="justify-content: center; margin-top: 28px;">
+        <a href="https://www.youtube.com/@michaelhetherington?sub_confirmation=1" class="btn-outline-light btn-lg" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><polygon points="10 9 15 12 10 15 10 9"/></svg>
+          Subscribe on YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mh-section">
+    <div class="container">
+      <h2 class="sr-only">Videos</h2>
+      <div class="mh-chips" role="group" aria-label="Filter videos by topic">
+        <button type="button" class="mh-chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="mh-chip" data-filter="start" aria-pressed="false">Start here</button>
+        <button type="button" class="mh-chip" data-filter="anxiety" aria-pressed="false">Anxiety and stress</button>
+        <button type="button" class="mh-chip" data-filter="digestion" aria-pressed="false">Digestion</button>
+        <button type="button" class="mh-chip" data-filter="sleep" aria-pressed="false">Sleep and energy</button>
+        <button type="button" class="mh-chip" data-filter="body" aria-pressed="false">Body healing</button>
+        <button type="button" class="mh-chip" data-filter="grief" aria-pressed="false">Grief and emotions</button>
+        <button type="button" class="mh-chip" data-filter="organs" aria-pressed="false">Chinese medicine organs</button>
+      </div>
+
+      <div class="mh-video-grid" id="video-grid">
+        {%- for v in videos %}
+        <article class="mh-vcard" data-cats="{{ v.cats }}">
+          <div class="yt-embed">
+            <button type="button" data-yt-play="{{ v.id }}" data-yt-title="{{ v.title | escape }}" aria-label="Play video: {{ v.title | escape }}">
+              <img src="https://i.ytimg.com/vi/{{ v.id }}/maxresdefault.jpg" data-yt-thumb="{{ v.id }}" alt="" width="1280" height="720" loading="lazy">
+              <span class="yt-play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+              {%- if v.duration != "" %}<span class="mh-vcard-dur">{{ v.duration }}</span>{% endif %}
+            </button>
+          </div>
+          <div class="mh-vcard-body">
+            <span class="mh-tag">{{ v.label }}</span>
+            <h3 class="mh-vcard-title">{{ v.title }}</h3>
+            {%- if v.views_display != "" %}<p class="mh-vcard-meta">{{ v.views_display }}</p>{% endif %}
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="mh-section" style="padding-top: 0;">
+    <div class="container">
+      <div class="mh-band">
+        <img src="/assets/images/tapping-phrases-cover.webp" alt="The 28 Best EFT Tapping Phrases guide" width="840" height="630" loading="lazy">
+        <div>
+          <span class="mh-eyebrow">Free guide</span>
+          <h2>Want to tap on your own, between videos?</h2>
+          <p>One 28-line tapping script that takes you from &ldquo;I really don't like this&rdquo; to &ldquo;I can let it go&rdquo;.</p>
+          <a href="https://healyourselfeft.com/eft-tapping-phrases" class="btn-primary btn-lg" target="_blank" rel="noopener" data-optin-location="videos_page">Get the free 28 phrases</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  (function () {
+    var chips = document.querySelectorAll('.mh-chip');
+    var cards = document.querySelectorAll('#video-grid .mh-vcard');
+    function apply(cat) {
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.getAttribute('data-filter') === cat)); });
+      cards.forEach(function (card) {
+        card.hidden = !(cat === 'all' || (' ' + card.getAttribute('data-cats') + ' ').indexOf(' ' + cat + ' ') > -1);
+      });
+    }
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var cat = chip.getAttribute('data-filter');
+        apply(cat);
+        history.replaceState(null, '', cat === 'all' ? location.pathname : '#' + cat);
+      });
+    });
+    function fromHash() {
+      var cat = location.hash.slice(1);
+      apply(cat && document.querySelector('.mh-chip[data-filter="' + cat + '"]') ? cat : 'all');
+    }
+    window.addEventListener('hashchange', fromHash);
+    if (location.hash) fromHash();
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {%- for v in videos %}
+    {
+      "@type": "VideoObject",
+      "name": {{ v.title | jsonify }},
+      "description": {{ v.title | append: ". A free EFT tapping video with Chinese medicine practitioner Michael Hetherington." | jsonify }},
+      "thumbnailUrl": ["https://i.ytimg.com/vi/{{ v.id }}/maxresdefault.jpg", "https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg"],
+      "uploadDate": "{{ v.upload }}",
+      "duration": "{{ v.iso_duration }}",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/{{ v.id }}",
+      "url": "https://www.youtube.com/watch?v={{ v.id }}"{% if v.views %},
+      "interactionStatistic": { "@type": "InteractionCounter", "interactionType": { "@type": "WatchAction" }, "userInteractionCount": {{ v.views }} }{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
