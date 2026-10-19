@@ -1,0 +1,148 @@
+---
+layout: default
+---
+{%- comment -%}
+  Shared blog article layout. Per-post data (category, read time, video, table of contents,
+  related videos/posts, "go deeper" card) lives in _data/posts.json; video details in _data/videos.json.
+{%- endcomment -%}
+{%- assign post = site.data.posts | where: "slug", page.slug | first -%}
+{%- assign phrases = "https://healyourselfeft.com/eft-tapping-phrases" -%}
+{%- if post.video -%}{%- assign video = site.data.videos | where: "id", post.video | first -%}{%- endif -%}
+<main class="post">
+
+  <header class="post-head">
+    <nav class="post-crumbs" aria-label="Breadcrumb">
+      <a href="/blog-life/">Blog</a> <span aria-hidden="true">/</span> <a href="/blog-life/#{{ post.category_slug }}">{{ post.category }}</a>
+    </nav>
+    <div class="post-meta"><span class="mh-tag">{{ post.category }}</span><span>{{ post.read }} min read</span></div>
+    <h1>{{ post.title }}</h1>
+    <div class="post-byline">
+      <img src="/assets/images/michael-avatar.webp" alt="" width="240" height="240">
+      <div>
+        <strong>Michael Hetherington</strong>
+        <span>Chinese medicine practitioner · Updated {{ post.date_display }}</span>
+      </div>
+    </div>
+  </header>
+
+  {%- if video %}
+  <figure class="post-feature">
+    <div class="yt-embed">
+      <button type="button" data-yt-play="{{ video.id }}" data-yt-title="{{ video.title | escape }}" aria-label="Play video: {{ video.title | escape }}">
+        <img src="https://i.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg" data-yt-thumb="{{ video.id }}" alt="" width="1280" height="720" fetchpriority="high">
+        <span class="yt-play" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
+    </div>
+    <figcaption>Tap along with the video, or read the full guide below.</figcaption>
+  </figure>
+  {%- elsif post.image %}
+  <figure class="post-feature">
+    <img src="{{ post.image }}" alt="{{ post.image_alt }}" width="{{ post.image_w }}" height="{{ post.image_h }}" fetchpriority="high">
+  </figure>
+  {%- endif %}
+
+  <div class="post-column">
+    {%- if post.toc.size > 1 %}
+    <nav class="post-toc" aria-labelledby="toc-title">
+      <p class="post-toc-title" id="toc-title">In this article</p>
+      <ol>
+        {%- for item in post.toc %}
+        <li><a href="#{{ item.id }}">{{ item.text }}</a></li>
+        {%- endfor %}
+      </ol>
+    </nav>
+    {%- endif %}
+
+    <article class="post-body">
+{{ content }}
+    </article>
+
+    {%- assign go = post.go %}
+    <aside class="post-deeper" aria-labelledby="deeper-title">
+      <span class="mh-eyebrow">Go deeper</span>
+      {%- if go.kind == "class" %}
+      <span class="mh-tag mh-tag--light mh-soon">Coming soon</span>
+      {%- endif %}
+      <h2 id="deeper-title">{{ go.name }}</h2>
+      <p>{{ go.line }}</p>
+      <div class="mh-btn-row">
+        {%- if go.kind == "class" %}
+        <a href="{{ go.url }}" class="btn-outline-light">Learn more</a>
+        <a href="{{ phrases }}" class="btn-primary" target="_blank" rel="noopener" data-optin-location="blog_end">Get notified (free 28 phrases)</a>
+        {%- else %}
+        <a href="{{ go.url }}" class="btn-primary" target="_blank" rel="noopener">{{ go.cta }} &rarr;</a>
+        {%- endif %}
+      </div>
+    </aside>
+
+    <aside class="post-author" aria-label="About the author">
+      <img src="/assets/images/michael-avatar.webp" alt="Michael Hetherington" width="240" height="240" loading="lazy">
+      <div>
+        <p class="post-author-title">About Michael Hetherington</p>
+        <p>Chinese medicine practitioner and IICT-accredited EFT trainer helping people clear the emotional root of anxiety, stress and chronic symptoms.</p>
+        <a href="/about/" class="mh-link">More about Michael &rarr;</a>
+      </div>
+    </aside>
+  </div>
+
+  {%- if post.related_videos.size > 0 %}
+  <section class="post-more" aria-labelledby="related-videos-title">
+    <div class="container">
+      <h2 id="related-videos-title">Tap along: related videos</h2>
+      <div class="mh-cards-3">
+        {%- for vid in post.related_videos %}
+        {%- assign rv = site.data.videos | where: "id", vid | first %}
+        <div class="post-video-card">
+          <div class="yt-embed">
+            <button type="button" data-yt-play="{{ rv.id }}" data-yt-title="{{ rv.title | escape }}" aria-label="Play video: {{ rv.title | escape }}">
+              <img src="https://i.ytimg.com/vi/{{ rv.id }}/maxresdefault.jpg" data-yt-thumb="{{ rv.id }}" alt="" width="1280" height="720" loading="lazy">
+              <span class="yt-play" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
+          </div>
+          <p class="post-video-title">{{ rv.title }}</p>
+          {%- if rv.duration != "" %}<p class="post-video-meta">{{ rv.duration }}</p>{% endif %}
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+  {%- endif %}
+
+  <section class="post-more post-more--sand" aria-labelledby="keep-reading-title">
+    <div class="container">
+      <h2 id="keep-reading-title">Keep reading</h2>
+      <div class="mh-cards-3">
+        {%- for slug in post.related %}
+        {%- assign rp = site.data.posts | where: "slug", slug | first %}
+        <a href="{{ rp.url }}" class="mh-post-card">
+          {%- if rp.video %}
+          <img src="https://i.ytimg.com/vi/{{ rp.video }}/maxresdefault.jpg" data-yt-thumb="{{ rp.video }}" alt="" width="1280" height="720" loading="lazy">
+          {%- else %}
+          <img src="{{ rp.image }}" alt="" width="{{ rp.image_w }}" height="{{ rp.image_h }}" loading="lazy">
+          {%- endif %}
+          <div class="mh-post-card-body">
+            <div class="mh-post-meta"><span class="mh-tag">{{ rp.category }}</span><span>{{ rp.read }} min read</span></div>
+            <h3>{{ rp.title }}</h3>
+          </div>
+        </a>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+</main>
+{%- if video %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": {{ video.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "thumbnailUrl": ["https://i.ytimg.com/vi/{{ video.id }}/maxresdefault.jpg", "https://i.ytimg.com/vi/{{ video.id }}/hqdefault.jpg"],
+  "uploadDate": "{{ video.upload }}",
+  "duration": "{{ video.iso_duration }}",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/{{ video.id }}",
+  "url": "https://www.youtube.com/watch?v={{ video.id }}"
+}
+</script>
+{%- endif %}
