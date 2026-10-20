@@ -1000,6 +1000,7 @@ body.nav-open { overflow: hidden; }
 
 /* Homepage science section */
 .mh-science .mh-center { margin-bottom: 36px; }
+.mh-science .mh-center h2 { margin-bottom: 28px; }
 .mh-science .mh-center p { color: var(--on-navy); }
 .mh-science-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; text-align: center; }
 .mh-science-stats div { padding: 22px 12px; border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius-card); background: rgba(255,255,255,.04); }
