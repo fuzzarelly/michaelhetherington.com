@@ -973,6 +973,65 @@ body.nav-open { overflow: hidden; }
 .lead-form .sendfox-attribution { display: block; margin-top: 6px; text-align: center; font-size: .72rem; color: var(--text-muted); opacity: .7; }
 @media (max-width: 480px) { .lead-card { padding: 22px 18px 18px; } }
 
+/* FAQ page: question pairs broken up by terracotta CTA bands */
+.faq-section { padding-top: 56px; padding-bottom: 56px; }
+.faq-section .prose { margin: 0 auto; }
+.faq-section .prose h2:first-child { margin-top: 0; }
+.faq-cta-band { background: var(--terracotta); color: #fff; padding: 44px 0; }
+.faq-cta { display: flex; align-items: center; gap: 36px; max-width: 900px; }
+.faq-cta-media { flex: 0 0 230px; position: relative; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 12px 28px rgba(60,20,5,.28); }
+.faq-cta-media img { display: block; width: 100%; height: auto; }
+.faq-cta-media--video::after { content: ""; position: absolute; inset: 0; margin: auto; width: 56px; height: 56px; border-radius: 50%; background: rgba(20,24,40,.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center / 24px no-repeat; }
+.faq-cta-text { flex: 1; min-width: 0; }
+.faq-cta-band .faq-cta-title { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.65rem; line-height: 1.2; color: #fff; margin: 0 0 8px; }
+.faq-cta-band .faq-cta-text p:not(.faq-cta-title) { color: rgba(255,255,255,.92); margin: 0 0 20px; }
+.faq-cta-band .faq-cta-btn { background: var(--cream); border-color: var(--cream); color: var(--navy); }
+.faq-cta-band .faq-cta-btn:hover { background: #fff; border-color: #fff; color: var(--navy); }
+.faq-signoff { text-align: center; }
+/* Footnotes (FAQ page and blog posts): small markers in the text, understated source list at the foot */
+.faq-ref { font-size: .68em; line-height: 0; margin-left: 1px; }
+.prose .faq-ref a, .post-body .faq-ref a { color: var(--terracotta); text-decoration: none; font-weight: 600; padding: 0 1px; }
+.prose .faq-ref a:hover, .post-body .faq-ref a:hover { text-decoration: underline; }
+.post-sources { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); font-size: .8rem; line-height: 1.6; color: var(--text-muted); scroll-margin-top: calc(var(--nav-height) + 16px); }
+.post-body .post-sources h2 { margin: 0 0 10px; font-family: 'Lora', Georgia, serif; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
+.post-body .post-sources ol { margin: 0 0 0 1.2rem; padding: 0; }
+.post-body .post-sources li { margin-bottom: 6px; font-size: .8rem; }
+.post-body .post-sources a { color: var(--text-muted); overflow-wrap: anywhere; }
+
+/* Homepage science section */
+.mh-science .mh-center { margin-bottom: 36px; }
+.mh-science .mh-center p { color: var(--on-navy); }
+.mh-science-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; text-align: center; }
+.mh-science-stats div { padding: 22px 12px; border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius-card); background: rgba(255,255,255,.04); }
+.mh-science-stats strong { display: block; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 2.6rem; line-height: 1.05; color: var(--highlight); }
+.mh-science-stats span { display: block; margin-top: 6px; font-size: .92rem; color: var(--on-navy); }
+.section-dark .mh-science-src { max-width: 720px; margin: 16px auto 0; text-align: center; font-size: .76rem; color: rgba(250,247,242,.55); }
+.section-dark .mh-science-label { margin: 40px 0 14px; text-align: center; font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--highlight); }
+.mh-studies { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 900px; margin: 0 auto; }
+.section-dark a.mh-study { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; border-radius: 14px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); color: var(--text-light); text-decoration: none; transition: background .2s, border-color .2s; }
+.section-dark a.mh-study:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.28); text-decoration: none; }
+.mh-study span { font-size: .78rem; letter-spacing: .04em; color: var(--highlight); }
+.mh-study strong { font-weight: 600; font-size: 1rem; line-height: 1.4; }
+.section-dark .mh-science .mh-link, .mh-science .mh-after .mh-link { color: var(--highlight); }
+@media (max-width: 760px) {
+  .mh-science-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .mh-science-stats strong { font-size: 2.1rem; }
+  .mh-studies { grid-template-columns: 1fr; }
+}
+.faq-sources { padding-top: 8px; padding-bottom: 56px; scroll-margin-top: calc(var(--nav-height) + 16px); }
+.faq-sources .prose { margin: 0 auto; padding-top: 24px; border-top: 1px solid var(--border); font-size: .8rem; line-height: 1.6; color: var(--text-muted); }
+.faq-sources .prose h2 { margin: 0 0 10px; font-family: 'Lora', Georgia, serif; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); }
+.faq-sources .prose ol { margin: 0 0 0 1.2rem; }
+.faq-sources .prose li { margin-bottom: 6px; }
+.faq-sources .prose a { color: var(--text-muted); overflow-wrap: anywhere; }
+.faq-signoff-name { font-family: 'DM Serif Display', Georgia, serif; font-size: 1.3rem; color: var(--navy); line-height: 1.4; }
+@media (max-width: 640px) {
+  .faq-cta-band { padding: 36px 0; }
+  .faq-cta { flex-direction: column; align-items: stretch; gap: 22px; text-align: center; }
+  .faq-cta-media { flex-basis: auto; width: 100%; max-width: 300px; margin: 0 auto; }
+  .faq-cta-band .faq-cta-title { font-size: 1.4rem; }
+}
+
 /* Credential List */
 .credential-list { list-style: none; }
 .credential-list li {
@@ -1302,11 +1361,14 @@ body.nav-open { overflow: hidden; }
 .mh-tile .mh-tile-pain { font-family: 'DM Serif Display', Georgia, serif; color: var(--navy); font-size: 1.3rem; line-height: 1.25; }
 .mh-tile .mh-tile-pain + h3 { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: .9rem; line-height: 1.4; color: var(--terracotta-dark); margin-top: auto; padding-top: 6px; }
 @media (min-width: 1025px) {
-  .mh-tiles--5 { grid-template-columns: repeat(5, 1fr); gap: 16px; }
-  .mh-tiles--5 .mh-tile .mh-tile-pain { font-size: 1.18rem; }
+  .mh-tiles--3 { grid-template-columns: repeat(3, 1fr); gap: 20px; }
 }
+.mh-tiles--3 .mh-tile { align-items: center; text-align: center; padding: 26px 22px; }
+.mh-tiles--3 .mh-tile .mh-tile-pain { font-size: 1.5rem; }
 @media (max-width: 480px) {
-  .mh-tile .mh-tile-pain { font-size: 1.05rem; }
+  .mh-tile .mh-tile-pain,
+  .mh-tiles--3 .mh-tile .mh-tile-pain { font-size: 1.15rem; }
+  .mh-tiles--3 .mh-tile { padding: 18px 14px; }
   .mh-tile .mh-tile-pain + h3 { font-size: .8rem; }
 }
 @media (max-width: 860px) {

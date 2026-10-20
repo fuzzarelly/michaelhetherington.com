@@ -56,6 +56,11 @@
   <!-- Styles -->
   <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css?v={% include asset-version.html %}">
 
+  {%- comment -%} Page-specific structured data: front matter "schema: schema/<file>.html" {%- endcomment -%}
+  {%- if page.schema %}
+  {% include {{ page.schema }} %}
+  {%- endif %}
+
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">

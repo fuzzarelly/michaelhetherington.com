@@ -53,7 +53,7 @@
   <url><loc>https://www.michaelhetherington.com/classes/</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.michaelhetherington.com/books/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.michaelhetherington.com/contact/</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.michaelhetherington.com/faqs/</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.michaelhetherington.com/faq/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.michaelhetherington.com/yinyangquiz/</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://www.michaelhetherington.com/privacy-policy/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://www.michaelhetherington.com/privacy-policy-scriptapp/</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
