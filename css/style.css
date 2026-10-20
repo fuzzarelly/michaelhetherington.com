@@ -1357,7 +1357,12 @@ body.nav-open { overflow: hidden; }
 .classes-grid .product-card > div { display: flex; flex-direction: column; }
 .classes-grid .product-card:target { border-color: var(--terracotta); box-shadow: 0 0 0 3px rgba(169,85,47,.18), var(--shadow-md); }
 .classes-grid .product-card-meta { margin-bottom: 20px; }
-.product-card .seminar-buy { margin-top: auto; align-self: flex-start; }
+.product-card .seminar-buy { margin-top: auto; align-self: center; }
+/* Seminars page: centre everything in each card */
+.classes-grid .product-card > div { text-align: center; }
+.classes-grid .product-card .flex { justify-content: center; }
+.classes-grid .product-card-bullets li { padding: 5px 0; }
+.classes-grid .product-card-bullets li::before { position: static; margin-right: 6px; }
 /* Homepage seminar tiles: lead with the problem it solves */
 .mh-tile .mh-tile-pain { font-family: 'DM Serif Display', Georgia, serif; color: var(--navy); font-size: 1.3rem; line-height: 1.25; }
 .mh-tile .mh-tile-pain + h3 { font-family: 'Lora', Georgia, serif; font-weight: 600; font-size: .9rem; line-height: 1.4; color: var(--terracotta-dark); margin-top: auto; padding-top: 6px; }
