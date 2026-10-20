@@ -128,9 +128,9 @@
     if (!link || typeof window.gtag !== 'function') return;
     try {
       var h1 = document.querySelector('h1');
-      var name = h1 ? h1.textContent.replace(/\s+/g, ' ').trim() : document.title;
+      var name = link.getAttribute('data-name') || (h1 ? h1.textContent.replace(/\s+/g, ' ').trim() : document.title);
       var href = link.href;
-      var newTab = e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0;
+      var newTab = link.target === '_blank' || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0;
       var gone = false;
       var go = function () { if (!gone) { gone = true; window.location.href = href; } };
       var params = {

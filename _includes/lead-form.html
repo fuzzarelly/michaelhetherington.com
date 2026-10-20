@@ -1,0 +1,43 @@
+{%- comment -%}
+  Email opt-in card for book resources and free guides. Same look on every page; only the list changes.
+  SendFox: {% include lead-form.html form="m7ry6v" title="Get your free workbook" sub="..." button="Send Me the Workbook" %}
+           Add load_script="no" for a second form on the same page (form.js must load once).
+  AWeber:  {% include lead-form.html aweber_list="awlist4807512" aweber_form="1698796510" redirect="https://..." title="..." button="..." %}
+{%- endcomment -%}
+{%- assign uid = include.id | default: include.form | default: include.aweber_form -%}
+<div class="lead-card">
+  {%- if include.title %}
+  <h2 class="lead-card-title">{{ include.title }}</h2>
+  {%- endif %}
+  {%- if include.sub %}
+  <p class="lead-card-sub">{{ include.sub }}</p>
+  {%- endif %}
+  {%- if include.aweber_list %}
+  {%- assign name_field = "name" %}
+  <form method="post" action="https://www.aweber.com/scripts/addlead.pl" accept-charset="UTF-8" class="lead-form">
+    <input type="hidden" name="meta_web_form_id" value="{{ include.aweber_form }}" />
+    <input type="hidden" name="meta_split_id" value="" />
+    <input type="hidden" name="listname" value="{{ include.aweber_list }}" />
+    <input type="hidden" name="redirect" value="{{ include.redirect | default: 'https://www.michaelhetherington.com/' }}" />
+    <input type="hidden" name="meta_adtracking" value="Basic_Form" />
+    <input type="hidden" name="meta_message" value="1" />
+    <input type="hidden" name="meta_required" value="email,name" />
+    <input type="hidden" name="meta_tooltip" value="" />
+  {%- else %}
+  {%- assign name_field = "first_name" %}
+  {%- unless include.load_script == "no" %}
+  <script charset="utf-8" type="text/javascript" src="https://sendfox.com/js/form.js"></script>
+  {%- endunless %}
+  <form method="post" action="https://sendfox.com/form/m44x5n/{{ include.form }}" class="sendfox-form lead-form" id="{{ uid }}" data-async="true" data-recaptcha="true">
+  {%- endif %}
+    <label for="{{ uid }}-name">First name</label>
+    <input id="{{ uid }}-name" type="text" name="{{ name_field }}" placeholder="Your first name" autocomplete="given-name" required />
+    <label for="{{ uid }}-email">Email</label>
+    <input id="{{ uid }}-email" type="email" name="email" placeholder="Your best email address" autocomplete="email" required />
+    <button type="submit">{{ include.button | default: "Send Me the Resources" }}</button>
+    <p class="lead-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>{{ include.note | default: "Free. Instant download. Unsubscribe anytime." }}</p>
+    {%- unless include.aweber_list %}
+    <a href="https://sendfox.com" class="sendfox-attribution">Sent with SendFox</a>
+    {%- endunless %}
+  </form>
+</div>

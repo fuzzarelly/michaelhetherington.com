@@ -8,33 +8,14 @@ noindex: true
 
 <main>
 
- <section class="section-dark" style="text-align: center; padding-top: 56px; padding-bottom: 56px;">
+ <section class="section-dark lead-page">
  <div class="container">
- <span class="badge badge--outline-light" style="margin-bottom: 16px; display: inline-block;">Free Guide</span>
- <h1 style="margin-bottom: 16px;">The Yin Yang Lifestyle Guide Book</h1>
- <p style="max-width: 600px; margin: 0 auto; color: rgba(250,247,242,0.85); font-size: 1.05rem;">Finding balance in the modern world: relationships, health &amp; money.</p>
+ <div class="lead-page-intro">
+ <span class="badge badge--outline-light">Free Guide</span>
+ <h1>The Yin Yang Lifestyle Guide Book</h1>
+ <p>Finding balance in the modern world: relationships, health &amp; money.</p>
  </div>
- </section>
-
- <section class="section-light" style="padding-top: 56px; padding-bottom: 72px;">
- <div class="container" style="max-width: 560px;">
- <div class="optin-box" style="padding: 40px; border-radius: 8px;">
- <h2 style="color: var(--cream); margin-bottom: 10px; font-size: 1.4rem;">Get the guide instantly</h2>
- <p style="color: rgba(250,247,242,0.8); margin-bottom: 24px; font-size: 0.95rem;">Enter your details below and it will be sent to you straight away. We respect your email privacy.</p>
- <form method="post" action="https://www.aweber.com/scripts/addlead.pl" accept-charset="UTF-8">
- <input type="hidden" name="meta_web_form_id" value="1698796510" />
- <input type="hidden" name="meta_split_id" value="" />
- <input type="hidden" name="listname" value="awlist4807512" />
- <input type="hidden" name="redirect" value="https://www.michaelhetherington.com/" />
- <input type="hidden" name="meta_adtracking" value="Basic_Form" />
- <input type="hidden" name="meta_message" value="1" />
- <input type="hidden" name="meta_required" value="email,name" />
- <input type="hidden" name="meta_tooltip" value="" />
- <p><input type="text" placeholder="First Name" name="name" required /></p>
- <p><input type="email" placeholder="Email" name="email" required /></p>
- <p><button type="submit">Send me the guide</button></p>
- </form>
- </div>
+ {% include lead-form.html aweber_list="awlist4807512" aweber_form="1698796510" redirect="https://www.michaelhetherington.com/" title="Get the guide instantly" sub="Enter your details below and it will be sent to you straight away. We respect your email privacy." button="Send Me the Guide" %}
  </div>
  </section>
 
