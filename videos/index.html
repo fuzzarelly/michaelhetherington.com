@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Free EFT Tapping Videos | Michael Hetherington"
-description: "Free EFT tapping videos for anxiety, stress, digestion, sleep and body healing. Tap along with Chinese medicine practitioner Michael Hetherington."
+description: "Free EFT tapping videos for anxiety, stress, digestion, sleep and body healing. Tap along with EFT practitioner Michael Hetherington."
 canonical: "https://www.michaelhetherington.com/videos/"
 ---
 {%- assign videos = site.data.videos | where_exp: "v", "v.groups.size > 0" | sort: "order" -%}
@@ -106,7 +106,7 @@ canonical: "https://www.michaelhetherington.com/videos/"
     {
       "@type": "VideoObject",
       "name": {{ v.title | jsonify }},
-      "description": {{ v.title | append: ". A free EFT tapping video with Chinese medicine practitioner Michael Hetherington." | jsonify }},
+      "description": {{ v.title | append: ". A free EFT tapping video with EFT practitioner Michael Hetherington." | jsonify }},
       "thumbnailUrl": ["https://i.ytimg.com/vi/{{ v.id }}/maxresdefault.jpg", "https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg"],
       "uploadDate": "{{ v.upload }}",
       "duration": "{{ v.iso_duration }}",
